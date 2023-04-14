@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>This is My page</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+
+<body>
+    <header>
+        <img src="images/logo_fci.png" alt="Logo" width="150" height="130"/>
+        <nav class="navigationBar">
+            <li> <a href="index.html">Home</a></li>
+            <li class="navBar-options">
+                <a href="#" class="options-btn">Options</a>
+                <div class="dropdown-content">
+                    <a href="add_student.html"> Add new student</a>
+                    <a href="view_Students.html"> View students</a>
+                </div>
+            </li>
+
+            <li class="navBar-account">
+                <a href="#" class="account-btn">Account</a>
+            </li>
+            <li><a href="contact.html"> Contact Us</a></li>
+        </nav>
+    </header>
+    
+    
+    <div class="container">
+        <form action="" class="form">
+            <h1 class="mainTitle">Edit Student</h1>
+
+            <div class="add_new">
+                <input class="input" placeholder="name" type="text" />
+                <label class="label">Name</label>
+            </div>
+            
+           
+            <div class="add_new">
+                <input class="input" placeholder="id" type="text" maxlength="8" />
+                <label class="label">ID</label>
+            </div>
+
+            <div class="add_new">
+                <input class="input" placeholder="level" type="number" min="1" max="4" value="2" />
+                <label class="label">Level</label>
+            </div>
+
+            <div class="add_new">
+                <select class="input">
+                    <option value="1">Active</option>
+                    <option value="2">Inactive</option>
+                </select>
+                <label class="label">Status</label>
+            </div>
+
+            <div class="add_new">
+                <input class="input" placeholder="Date" type="date" />
+               <label class="label">Date of birth</label>
+            </div>
+
+            <div class="add_new">
+                <select class="input" disabled >
+                    <option value="1">CS</option>
+                    <option value="2" selected>IS</option>
+                    <option value="3">IT</option>
+                    <option value="4">AI</option>
+                    <option value="5">DS</option>
+                </select>
+                <label class="label">Department</label>
+            </div>
+
+            <div class="add_new">
+                
+                <input class="input" placeholder="gpa" type="number" min="0" max="4.0" step="0.01"/>
+                <label class="label">GPA</label>
+            </div>
+
+            <div class="add_new">
+                <input class="input" placeholder="mail" type="email"/>
+                <label class="label">Email</label>
+            </div>
+
+            <div class="add_new">
+                <select class="input">
+                    <option value="1">Male</option>
+                    <option value="2">Female</option>
+                </select>
+                <label class="label">Gender</label>
+            </div>
+
+            <div class="add_new">
+                <input class="input" placeholder="PhNumber" type="text" />
+                <label class="label">Phone Number</label>
+            </div>
+
+
+            <button type="Submit" class="submit">Save Changes</button>
+            <button type="delete" class="submit">Delete Student</button>
+        </form>
+    </div>
+</body>
+</html>

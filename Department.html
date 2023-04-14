@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Assign Department</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+            <img src="images/logo_fci.png" alt="Logo" width="150" height="130"/>
+            <nav class="navigationBar">
+                <li> <a href="index.html">Home</a></li>
+                <li class="navBar-options">
+                    <a href="#" class="options-btn">Options</a>
+                    <div class="dropdown-content">
+                        <a href="add_student.html"> Add new student</a>
+                        <a href="view_Students.html"> View students</a>
+                    </div>
+                </li>
+
+                <li class="navBar-account">
+                    <a href="#" class="account-btn">Account</a>
+                </li>
+                <li><a href="contact.html"> Contact Us</a></li>
+            </nav>
+        </header>
+  
+
+    <div class="container">
+      
+      <form action="" class="form">
+        <h1 class="mainTitle">Assign Department</h1>
+        <div class="add_new">
+          <input type="text" id="student_id" name="student_id" required class="input" placeholder="Enter ID">
+          <label class="label">ID</label>
+        </div>
+
+        <div class="add_new">
+          <input type="text" id="student_name" name="student_name" required class="input" placeholder="Enter student name">
+          <label class="label">Name </label>
+        </div>
+
+        <div class="add_new">
+          <select name="department" class="input">
+            <option value="" disabled>-- Select a department --</option>
+              <option value="Computer Science">Computer Science</option>
+              <option value="Information Technology">Information Technology</option>
+              <option value="Software Engineering">Software Engineering</option>
+            <option value="department1">Department 1</option>
+            <option value="department2">Department 2</option>
+            <option value="department3">Department 3</option>
+            <option value="department4">Department 4</option>
+          </select>
+          <label class="label">Department</label>
+        </div>
+
+        <button type="submit" class="submit">Assign Department</button>
+      </form>
+    </div> 
+  </body>
+</html>
