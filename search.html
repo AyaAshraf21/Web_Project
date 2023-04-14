@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Search</title>
+    <link rel="stylesheet" type="text/css" href="viewstudents.css">
+  </head>
+  <body>
+  <header>
+    <nav class="navigationBar">
+      <li> <a href="index.html">Home</a></li>
+      <li class="navBar-options">
+        <a href="#" class="options-btn">Options</a>
+        <ul>
+          <li> <a href="add_student.html"> Add new student</a></li>
+          <li><a href="view_Students.html"> View students</a></li>
+        </ul>
+      </li>
+
+      <li class="navBar-account">
+        <a href="#" class="account-btn">Account</a>
+      </li>
+    </nav>
+  </header>
+
+
+  <footer>
+    <div class="contact">
+      <h3> <a href="../contact.htm"> Contact Us</a></h3>
+    </div>
+  </footer>
+    <div class="search-box">
+      <input type="text" placeholder="Enter student name">
+      <button id="searchbutton" onclick="searchStudents()">Search</button>
+    </div>
+    
+    <table id="results-table"></table>
+    
+    <script src="viewstudents.js"></script>
+  </body>
+</html>
