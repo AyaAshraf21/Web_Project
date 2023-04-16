@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <title>View all students</title>
-   <link rel="stylesheet" href="StyleSheet1.css"> 
+   <link rel="stylesheet" href="style.css"> 
 </head>
 
 <body>
@@ -27,112 +27,31 @@
         </nav>
     </header>
       
+        <form action="Department.html" method="post">
+            <input type="search" placeholder="Search by name" class="search2"/> 
+            <button type="submit" class="search">search</button>
+            <br />
+            <div class="view">
+                <table border="1" id = "student-table-body">
+                    <caption align="" class="header_view"> <h1>All students</h1> </caption>
+                    <thead>
+                        <tr>
 
-
-
-
-   <!-- <form action="Department.html" method="post"> -->
-
-        <input type="search" placeholder="Search by name" class="search"/>
-        <button class="search-btn" type="submit">
-            <span>Search</span>
-        </button>
-        <div class="view">
-            <table border="1">
-                <caption align="" class="header_view"> <h1>All students</h1> </caption>
-                <thead>
-                    <tr>
-
-                        <th>&ensp; Name &ensp; </th>
-                        <th>&ensp; ID &ensp;</th>
-                        <th>&ensp; Level &ensp;</th>
-                        <th>&ensp; Status &ensp;</th>
-                        <th>&ensp; Date of brith &ensp;</th>
-                        <th>&ensp; GPA &ensp;</th>
-                        <th>&ensp; Gender &ensp;</th>
-                        <th>&ensp; Email &ensp;</th>
-                        <th>&ensp; Department &ensp;</th>
-                        <th>&ensp; Phone number &ensp;</th>
-                        <th>&ensp; &ensp;</th>
-                </thead>
-                <tbody>
-                    <tr>
-
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><a href="EditStudentsPage.html" class="edit">&ensp; Edit &ensp;</a></td>
-
-                    </tr>
-                    <tr>
-
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td>
-                            <a href="EditStudentsPage.html" class="edit">&ensp; Edit &ensp;</a>
-                        </td>
-
-                    </tr>
-                    <tr>
-
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><a href="EditStudentsPage.html" class="edit">&ensp; Edit &ensp;</a></td>
-                    </tr>
-                    <tr>
-
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><a href="EditStudentsPage.html" class="edit">&ensp; Edit &ensp;</a></td>
-                    </tr>
-                    <tr>
-
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><p> &ensp; </p> </td>
-                        <td><a href="EditStudentsPage.html" class="edit">&ensp; Edit &ensp;</a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </form>
-</body>
+                            <th>&ensp; Name &ensp; </th>
+                            <th>&ensp; ID &ensp;</th>
+                            <th>&ensp; Level &ensp;</th>
+                            <th>&ensp; Status &ensp;</th>
+                            <th>&ensp; Date of brith &ensp;</th>
+                            <th>&ensp; GPA &ensp;</th>
+                            <th>&ensp; Gender &ensp;</th>
+                            <th>&ensp; Email &ensp;</th>
+                            <th>&ensp; Department &ensp;</th>
+                            <th>&ensp; Phone number &ensp;</th>
+                            <th>&ensp; &ensp;</th>
+                    </thead>
+                </table>
+            </div>
+        </form>
+        <script src="view_all_students.js"></script>
+    </body>
 </html>
