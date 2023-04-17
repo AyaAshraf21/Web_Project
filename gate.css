@@ -7,6 +7,7 @@ body {
     background-color: #f1f1f1;
   }
   
+  
   button {
     padding: 0;
     width: 180px;
@@ -79,4 +80,12 @@ body {
   button:hover span {
     transform: translateY(0);
   }
+
+  .button-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
   

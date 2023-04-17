@@ -74,6 +74,7 @@ saveBtn.addEventListener('click', () => {
   // Save the updated student data back to local storage
   localStorage.setItem('students', JSON.stringify(students));
 
+  alert("Student data has been updated successfully");
   // Redirect the user back to the view all students page
   window.location.href = "view_Students.html";
 });
@@ -84,9 +85,17 @@ saveBtn.addEventListener('click', () => {
 const deleteBtn = document.getElementById('del-btn');
 
 deleteBtn.addEventListener('click', () => {
+  
+  const confirmed = confirm("Are you sure you want to delete this student?");
+  
+  if (!confirmed) {
+    return;
+  }
+  
+
   // Find the index of the student with the matching ID
   const studentIndex = students.findIndex((s) => s.id === studentId);
-
+  
   // Remove the student from the array
   students.splice(studentIndex, 1);
 
