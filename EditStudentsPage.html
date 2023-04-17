@@ -7,6 +7,13 @@
     </head>
 
     <body>
+        <script>
+            const loggedIn = localStorage.getItem('loggedIn');
+            if (!loggedIn) {
+                // Redirect to login.html
+                window.location.href = 'login.html';
+            }
+        </script>
         <header>
             <img src="images/final_logo.jpeg" alt="Logo" width="150" height="130" />
             <nav class="navigationBar">
@@ -14,15 +21,11 @@
                 <li class="navBar-options">
                     <a href="#" class="options-btn">Options</a>
                     <div class="dropdown-content">
-                        <a href="add_student.html"> Add new student</a>
-                        <a href="view_Students.html"> View students</a>
+                        <a href="add_student.html" class="active">Add new student</a>
+                        <a href="view_Students.html">View students</a>
                     </div>
                 </li>
-
-                <li class="navBar-account">
-                    <a href="#" class="account-btn">Account</a>
-                </li>
-                <li><a href="contact.html"> Contact Us</a></li>
+                <li><a id="logout" href="">Logout</a></li>
             </nav>
         </header>
 
@@ -88,7 +91,7 @@
                 </div>
 
                 <div class="add_new">
-                    <input type="tel" id="phone" name="phone" pattern="(01)[0,1,2,5][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]" class="input" placeholder="Phone Number" id = "phone">
+                    <input type="tel" id="phone" name="phone" class="input" placeholder="Phone Number" id = "phone">
                     <label for="phone" class="label">Phone Number</label> 
                 </div>
 
@@ -96,7 +99,7 @@
                 <button type="button" class="submit" id = "del-btn">Delete Student</button>
             </form>
         </div>
-
+        <script src="scripts/logout.js"></script>
         <script src="scripts/edit-student.js"></script>
     </body>
 </html>

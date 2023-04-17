@@ -1,49 +1,38 @@
-const form = document.getElementById('form');
-const ID = document.getElementById('ID');
-const password = document.getElementById('password');
+// Login function
+function login() {
+  // Get entered username and password
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
 
-let admin;
+  // Get admins from local storage
+  const admins = JSON.parse(localStorage.getItem('admins'));
 
-fetch('scripts/admin.json')
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        admin = data;
-    })
-    .catch(error => {
-        console.error(error);
-    });
+  // Check if entered username and password match any of the admins
+  const matchedAdmin = admins.find(admin => admin.username === username && admin.password === password);
 
+  if (matchedAdmin) {
+    // Set logged in status in local storage
+    localStorage.setItem('loggedIn', true);
 
-// const admin = JSON.parse('admin.json');
-form.addEventListener('submit', (event) => {
-    // Prevent the form from submitting
-    event.preventDefault();
+    alert('Logged in successfully!');
 
-    if (ID.value.trim() === '') {
-        // Display error message
-        alert('Please enter the ID');
-        // Focus on the ID field
-        ID.focus();
-        // Exit the function
-        return;
-    }
-    // Check if the age field is empty
-    if (password.value.trim() === '') {
-        // Display error message
-        alert('Please enter the password');
-        // Focus on the password field
-        password.focus();
-        // Exit the function
-        return;
-    }
-    const matching = admin.find(u => u.ID === ID && u.password === password);
+    // Redirect to index.html
+    window.location.href = 'index.html';
+  } else {
+    alert('Invalid username or password');
+  }
+}
 
-    if (!matching) {
-        alert('ID or password is invalid');
-        return;
-    }
-
-    alert('Login success');
-    window.location.href = "index.html";
+// Add event listener to login form submit button
+const loginForm = document.getElementById('addStudentForm');
+loginForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+  login();
 });
+
+const loggedIn = localStorage.getItem("loggedIn");
+if (loggedIn === "true") {
+    window.location.href = "index.html";
+}
+
+

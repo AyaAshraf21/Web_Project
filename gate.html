@@ -1,39 +1,22 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <title>Gate</title>
+  <meta charset="UTF-8">
+  <title>Buttons</title>
+  <link rel="stylesheet" href="gate.css">
 </head>
-
 <body>
-  <button>Human Resources</button>
-  <button onclick="redirectToSyncedHomePage()">Students Affairs</button>
-  <button>Higher Studies</button>
-  <button>Laboratory Tracking</button>
 
+  <div class="button-container">
+    <div class="button-row">
+      <a href="notfound.html"><button class="wrong-btn">Human Resources</button></a>
+      <a href="index.html"><button class="correct-btn">Students Affairs</button></a>
+    </div>
+    <div class="button-row">
+      <a href="notfound.html"><button class="wrong-btn">Higher Studies</button></a>
+      <a href="notfound.html"><button class="wrong-btn">Laboratory Tracking</button></a>
+    </div>
+  </div>
 
-  <style>
-    /* Center the buttons horizontally and vertically */
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    /* Style the buttons */
-    button {
-      width: 200px;
-      height: 50px;
-      margin: 10px;
-      font-size: 16px;
-    }
-  </style>
-  <script>
-    function redirectToSyncedHomePage() {
-      window.location.href = "login.html";
-    }
-  </script>
 </body>
-
 </html>
