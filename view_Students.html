@@ -9,7 +9,7 @@
 <body>
     
     <header>
-        <img src="C:\Users\A plus\Downloads\WhatsApp Image 2023-04-16 at 9.13.45 PM.jpeg" " alt="Logo" width="150" height="130" />
+        <img src="images/final_logo.jpeg" " alt="Logo" width="150" height="130" />
         <nav class="navigationBar">
             <li> <a href="index.html">Home</a></li>
             <li class="navBar-options">
@@ -28,9 +28,21 @@
     </header>
       
         <form action="Department.html" method="post">
-            <input type="search" placeholder="Search by name" class="search2"/> 
-            <button type="submit" class="search">search</button>
-            <br />
+            <input type="search" placeholder="Search" id="searchName" class="search"/> 
+            <select class="search-option">
+                <option value="0">Name</option>
+                <option value="1">ID</option>
+                <option value="2">Level</option>
+                <option value="3">Status</option>
+                <option value="4">Date of Birth</option>
+                <option value="5">GPA</option>
+                <option value="6">Gender</option>
+                <option value="7">Email</option>
+                <option value="8">Department</option>
+                <option value="9">Phone Number</option>
+              </select>
+                      
+                    <br />
             <div class="view">
                 <table border="1" id = "student-table-body">
                     <caption align="" class="header_view"> <h1>All students</h1> </caption>
@@ -52,6 +64,6 @@
                 </table>
             </div>
         </form>
-        <script src="view_all_students.js"></script>
+        <script src="scripts/view_all_students.js"></script>
     </body>
 </html>

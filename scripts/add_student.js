@@ -78,5 +78,5 @@ form.addEventListener('submit', (event) => {
   localStorage.setItem('students', JSON.stringify(students));
 
   alert('Student added successfully');
-  form.reset();
+  window.location.href = "view_Students.html";
 });
