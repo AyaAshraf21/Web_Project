@@ -45,6 +45,12 @@ phoneInput.value = student.phone;
 const saveBtn = document.getElementById('save-btn');
 
 saveBtn.addEventListener('click', () => {
+
+  if (!validateForm()) {
+    return;
+  }
+
+
   // Get the updated student data from the form
   const updatedStudent = {
     name: nameInput.value,
@@ -69,7 +75,6 @@ saveBtn.addEventListener('click', () => {
   localStorage.setItem('students', JSON.stringify(students));
 
   // Redirect the user back to the view all students page
-  console.log("Redirecting to view all students page");
   window.location.href = "view_Students.html";
 });
 
@@ -92,3 +97,52 @@ deleteBtn.addEventListener('click', () => {
   console.log("Redirecting to view all students page");
   window.location.href = "view_Students.html";
 });
+
+function validateForm() {
+  // Get the form fields
+  const name = nameInput.value.trim();
+  const id = idInput.value.trim();
+  const level = levelInput.value.trim();
+  const status = statusSelect.value.trim();
+  const date = dateInput.value.trim();
+  const department = departmentSelect.value.trim();
+  const gpa = gpaInput.value.trim();
+  const email = emailInput.value.trim();
+  const gender = genderSelect.value.trim();
+  const phone = phoneInput.value.trim();
+
+// Validate form data
+if (nameInput.value.trim() === '') {
+  alert('Please enter a name.');
+  return;
+}
+
+if (emailInput.value.trim() === '' || !/^\S+@\S+\.\S+$/.test(emailInput.value)) {
+  alert('Please enter a valid email address.');
+  return;
+}
+
+if (idInput.value.trim() === '') {
+  alert('Please enter an ID.');
+  return;
+}
+if (isNaN(levelInput.value) || levelInput.value < 1 || levelInput.value > 4) {
+  alert('Please enter a level between 1 and 4.');
+  return;
+}
+if (isNaN(gpaInput.value) || gpaInput.value < 0 || gpaInput.value > 4) {
+  alert('Please enter a GPA between 0 and 4.');
+  return;
+}
+if (!/^01[0125]\d{8}$/.test(phoneInput.value)) {
+  alert('Please enter a valid phone number in the format 01X12345678.');
+  return;
+}
+if (new Date(dateInput.value) > new Date()) {
+  alert('Please enter a date of birth that is not in the future.');
+  return;
+}
+
+
+  return true;
+}

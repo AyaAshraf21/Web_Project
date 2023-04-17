@@ -31,22 +31,22 @@
                 <h1 class="mainTitle">Edit Student</h1>
 
                 <div class="add_new">
-                    <input disabled class="input" placeholder="ID" type="text" maxlength="8" id = "id"/>
+                    <input disabled type="text" placeholder="ID" class="input" id = "id">
                     <label class="label">ID</label>
                 </div>
 
                 <div class="add_new">
-                    <input class="input" placeholder="Name" type="text" id = "name"/>
+                    <input type="text" placeholder="Name" class="input" id="name">
                     <label class="label">Name</label>
                 </div>
 
                 <div class="add_new">
-                    <input class="input" placeholder="Level" type="number" min="1" max="4" value="2" id ="level"/>
-                    <label class="label">Level</label>
+                    <input type="number" placeholder="Level" id="level" name="level" min="1" max="4" class="input" id="level">
+                    <label for="level" class="label">Level</label>
                 </div>
 
                 <div class="add_new">
-                    <select class="input" id = "status">
+                    <select name = "Status" class="input" id = "status">
                         <option value="Active">Active</option>
                         <option value="Inactive">Inactive</option>
                     </select>
@@ -54,12 +54,12 @@
                 </div>
 
                 <div class="add_new">
-                    <input class="input" placeholder="Date" type="date" id = "date"/>
+                    <input type="date" class="input" id = "date">
                     <label class="label">Date of birth</label>
                 </div>
 
                 <div class="add_new">
-                    <select class="input" disabled class = "dropdown-content" id = "de">
+                    <select name="department" class="input" id = "de">
                         <option value="CS">Computer Science</option>
                         <option value="IS">Information System</option>
                         <option value="AI">Artificial Intelligence</option>
@@ -75,12 +75,12 @@
                 </div>
 
                 <div class="add_new">
-                    <input class="input" placeholder="Email" type="email" id = "email"/>
+                    <input type="email" placeholder="Email" class="input" id = "email">
                     <label class="label">Email</label>
                 </div>
 
                 <div class="add_new">
-                    <select class="input" id = "gender">
+                    <select name="gender" class="input" id = "gender">
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                     </select>
@@ -88,8 +88,8 @@
                 </div>
 
                 <div class="add_new">
-                    <input class="input" placeholder="Phone Number" type="text" id = "phone"/>
-                    <label class="label">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" pattern="(01)[0,1,2,5][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]" class="input" placeholder="Phone Number" id = "phone">
+                    <label for="phone" class="label">Phone Number</label> 
                 </div>
 
                 <button type="button" class="submit" id = "save-btn">Save Changes</button>
