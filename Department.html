@@ -3,54 +3,57 @@
   <head>
     <meta charset="UTF-8">
     <title>Assign Department</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
   </head>
   <body>
     <header>
-      <img src="images/final_logo.jpeg" " alt="Logo" width="150" height="130" />
-      <nav class="navigationBar">
-          <li><a href="index.html">Home</a></li>
-          <li class="navBar-options">
-              <a href="#" class="options-btn">Options</a>
-              <div class="dropdown-content">
-                  <a href="add_student.html" class="active">Add new student</a>
-                  <a href="view_Students.html">View students</a>
-                  <a href="assign-department.html"> Assign Department</a>
+            <img src="images/logo_fci.png" alt="Logo" width="150" height="130"/>
+            <nav class="navigationBar">
+                <li> <a href="index.html">Home</a></li>
+                <li class="navBar-options">
+                    <a href="#" class="options-btn">Options</a>
+                    <div class="dropdown-content">
+                        <a href="add_student.html"> Add new student</a>
+                        <a href="view_Students.html"> View students</a>
+                    </div>
+                </li>
+
+                <a href="assign-department.html"> Assign Department</a>
+                <li><a href="contact.html"> Contact Us</a></li>
+                <li><a id="logout" href="">Logout</a></li>
+            </nav>
+        </header>
+  
+
+        <div class="container">
+          <form id="addStudentForm" action="" class="form">
+              <h1 class="mainTitle">Assign Department</h1>
+              <div class="add_new">
+                  <input disabled type="text" placeholder="Name" class="input" id="name">
+                  <label class="label">Name</label>
               </div>
-          </li>
-          <li><a href="contact.html"> Contact Us</a></li>
-          <li><a id="logout" href="">Logout</a></li>
-      </nav>
-  </header>
-       <div class="container">
-        <form id="addStudentForm" action="" class="form">
-            <h1 class="mainTitle">Assign Department</h1>
-            <div class="add_new">
-                <input disabled type="text" placeholder="Name" class="input" id="name">
-                <label class="label">Name</label>
+  
+  
+              <div class="add_new">
+                <input disabled type="text" placeholder="ID" class="input" id="id">
+                <label class="label">ID</label>
             </div>
-
-
+  
             <div class="add_new">
-              <input disabled type="text" placeholder="ID" class="input" id="id">
-              <label class="label">ID</label>
+              <select name="department" class="input" id="de">
+                  <option value="CS">Computer Science</option>
+                  <option value="IS">Information System</option>
+                  <option value="AI">Artificial Intelligence</option>
+                  <option value="DS">Decision Support</option>
+                  <option value="IT">Information Technology</option>
+              </select>
+              <label class="label">Department</label>
           </div>
-
-          <div class="add_new">
-            <select name="department" class="input" id="de">
-                <option value="CS">Computer Science</option>
-                <option value="IS">Information System</option>
-                <option value="AI">Artificial Intelligence</option>
-                <option value="DS">Decision Support</option>
-                <option value="IT">Information Technology</option>
-            </select>
-            <label class="label">Department</label>
-        </div>
-        <button type="submit" id = "save-btn" class="submit">Assign</button>
-      </form>
-  </div>
-
-    </div> 
-    <script src="scripts/assign-department.js"></script>
-  </body>
-</html>
+          <button type="submit" id = "save-btn" class="submit">Assign</button>
+        </form>
+    </div>
+  
+      </div> 
+      <script src="scripts/assign-department.js"></script>
+    </body>
+  </html>

@@ -1,4 +1,3 @@
-
 const loggedIn = localStorage.getItem("loggedIn");
 if (loggedIn !== "true") {
     alert('You must be logged in to view this page.');

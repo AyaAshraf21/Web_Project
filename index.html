@@ -1,31 +1,77 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            Homepage
-        </title>
-        <meta charset="UTF-8" />
-        <link rel="stylesheet" href="style.css" />
-    </head>
 
-    <body>
-        <header>
-            <img src="images/final_logo.jpeg" " alt="Logo" width="150" height="130" />
-            <nav class="navigationBar">
-                <li><a href="index.html">Home</a></li>
-                <li class="navBar-options">
-                    <a href="#" class="options-btn">Options</a>
-                    <div class="dropdown-content">
-                        <a href="add_student.html" class="active">Add new student</a>
-                        <a href="view_Students.html">View students</a>
-                        <a href="assign-department.html"> Assign Department</a>
-                    </div>
-                </li>
-                <li><a href="contact.html"> Contact Us</a></li>
-                <li><a id="logout" href="">Logout</a></li>
-            </nav>
-        </header>
-        <script src="scripts/logout.js"></script>
-    </body>
+<head>
+    <title>
+        Homepage
+    </title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/style.css"> 
+</head>
+
+<body>
+    <header >
+        <img src="images/final_logo.png" alt="Logo" width="150" height="130"/>
+        <nav class="navigationBar">
+            <li> <a href="#" class="active">Home</a></li>
+            <li class="navBar-options">
+                <a href="#" class="options-btn">Options</a>
+                <div class="dropdown-content">
+                    <a href="add_student.html"> Add new student</a>
+                    <a href="view_Students.html"> View students</a>
+                    <a href="assign-department.html"> Assign Department</a>
+                </div>
+            </li>
+            <li><a href="contact.html"> Contact Us</a></li>
+            <li><a id="logout" href="">Logout</a></li>            
+            
+
+        </nav>
+    </header>
     <h1 class="mainTitle">Welcome to Students affair</h1>
+    <br><br><br>
+    <h2 class="second_title">How can we help you?</h2>
+    <br>
+
+    <div class="row">
+        <div class="col">
+            <img src="images/add_new.png" width="150" height="150"/>
+            <p class="paragraph">you can add a new student to the system</p>
+        </div>
+
+        <div class="col">
+            <img src="images/view_students.png" width="170" height="170"/>
+            <p class="paragraph">you can view all students in separate page rendered in a table with a related set of attributes</p>
+        </div>
+
+        <div class="col">
+            <img src="images/search.png" width="150" height="150"/>
+            <p class="paragraph">you can search for student by name , id , level , status , date of birth , GPA , gender , email , department or phone number</p>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col">
+            <img src="images/edit.png" width="150" height="150"/>
+            <p class="paragraph">you can update an existing student information except department , and can you can also change status of student from active to inactive or vice versa from the table viewing all students</p>
+        </div>
+
+        <div class="col">
+            <img src="images/department.png" width="150" height="150"/>
+            <p class="paragraph">you can select specific student after searching to assign department through the student's department assignment page</p>
+        </div>
+
+        <div class="col">
+            <img src="images/delete.png" width="150" height="150"/>
+            <p class="paragraph">you can delete an existing student data through a delete button in edit student data page with a confirmation dialogue for the action before deletion occurs</p>
+        </div>
+    </div>
+    <br><br><br>
+
+
+    <script src="scripts/logout.js"></script>
+</body>
+
+
 </html>

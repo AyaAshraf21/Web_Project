@@ -129,4 +129,3 @@ searchInput.addEventListener('input', () => {
 searchOption.addEventListener('change', () => {
   searchInput.value = ''; // Clear the search input
 });
-
